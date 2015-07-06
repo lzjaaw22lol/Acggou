@@ -1,0 +1,165 @@
+{\rtf1\ansi\ansicpg936\cocoartf1347\cocoasubrtf570
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fswiss\fcharset0 ArialMT;
+\f3\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red217\green11\blue0;\red38\green38\blue38;\red238\green255\blue213;
+\red196\green26\blue22;\red92\green38\blue153;\red46\green13\blue110;\red28\green0\blue207;\red170\green13\blue145;
+\red63\green110\blue116;\red255\green83\blue8;\red100\green56\blue32;\red255\green39\blue18;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14840\viewh8400\viewkind0
+\deftab529
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\fs36 \cf2 \CocoaLigature0 UICollectionViewCell
+\f1 \'d7\'ee\'d0\'c2\'d7\'a2\'b2\'e1\'b7\'bd\'ca\'bd\
+\pard\pardeftab720
+
+\f2\fs28 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /UINib *cellNib = [UINib nibWithNibName:@"NibCell" bundle:nil];\cb1 \expnd0\expndtw0\kerning0
+\
+\cb4 \expnd0\expndtw0\kerning0
+//[self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"simpleCell"];\
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\fs36 \cf5 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 MJRefresh.h
+\f1 \'d3\'d0\'d0\'c2\'d3\'c3\'b7\'a8\'a3\'acxcode6\'b2\'bb\'c4\'dc\'d3\'c3pod\'b5\'bc\'c8\'eb\
+\
+cocoapods\'c2\'fd\
+\pard\pardeftab720
+
+\f3\fs28 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 pod install --verbose --no-repo-update \
+
+\f1 \'bb\'f2\'d5\'df
+\f3  \
+pod update --verbose --no-repo-update \
+\
+
+\f1\fs36 \cf2 \'d6\'a7\'b8\'b6\'b1\'a6\'bc\'af\'b3\'c9\'a3\'ac\'d0\'e8\'d2\'aa\'c5\'e4\'d6\'c3cocoapods\'b5\'c4\'d6\'a7\'b8\'b6\'b1\'a6sdk\'c2\'b7\'be\'b6\'a3\'ac\'b6\'f8\'c7\'d2\'d0\'e8\'d2\'aa\'d4\'dapod\'ba\'cd\'cf\'ee\'c4\'bf\'c2\'b7\'be\'b6\'b6\'bc\'d2\'aa\'d3\'d0openssl\
+\
+\'bc\'fc\'c5\'cc\'bc\'d3toolbar\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\fs22 \cf6 \kerning1\expnd0\expndtw0 \CocoaLigature0 UIToolbar\cf0  *tl = [[\cf6 UIToolbar\cf0  \cf7 alloc\cf0 ] \cf7 initWithFrame\cf0 :\cf7 CGRectMake\cf0 (\cf8 0\cf0 , \cf8 0\cf0 , \cf8 50\cf0 , \cf8 30\cf0 )];\
+    \cf6 UIBarButtonItem\cf0  *one = [[\cf6 UIBarButtonItem\cf0  \cf7 alloc\cf0 ] \cf7 initWithBarButtonSystemItem\cf0 :\cf7 UIBarButtonSystemItemAdd\cf0  \cf7 target\cf0 :\cf9 nil\cf0  \cf7 action\cf0 :\cf9 nil\cf0 ];\
+    \cf6 UIBarButtonItem\cf0  *two = [[\cf6 UIBarButtonItem\cf0  \cf7 alloc\cf0 ] \cf7 initWithBarButtonSystemItem\cf0 :\cf7 UIBarButtonSystemItemBookmarks\cf0  \cf7 target\cf0 :\cf9 nil\cf0  \cf7 action\cf0 :\cf9 nil\cf0 ];\
+    \cf6 UIBarButtonItem\cf0  *three = [[\cf6 UIBarButtonItem\cf0  \cf7 alloc\cf0 ] \cf7 initWithBarButtonSystemItem\cf0 :\cf7 UIBarButtonSystemItemAction\cf0  \cf7 target\cf0 :\cf9 nil\cf0  \cf7 action\cf0 :\cf9 nil\cf0 ];\
+    \cf6 UIBarButtonItem\cf0  *four = [[\cf6 UIBarButtonItem\cf0  \cf7 alloc\cf0 ] \cf7 initWithBarButtonSystemItem\cf0 :\cf7 UIBarButtonSystemItemEdit\cf0  \cf7 target\cf0 :\cf9 nil\cf0  \cf7 action\cf0 :\cf9 nil\cf0 ];\
+\
+    [tl \cf7 setItems\cf0 :\cf8 @[\cf0 one\cf8 ]\cf0 ];\
+    [\cf10 headView\cf0 .\cf10 searchBar\cf0  \cf7 setInputAccessoryView\cf0 :tl];\
+\
+\
+\pard\pardeftab720
+
+\f3\b\fs36 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 setTranslatesAutoresizingMaskIntoConstraints 
+\f1 \'c9\'e8\'d6\'c3\'ce\'aa
+\f3 NO\
+\
+
+\f1 \'d3\'a6\'b8\'c3\'d4\'da\'c3\'bf\'d2\'bb\'b8\'f6
+\f3 viewcontroller
+\f1 \'d6\'d0\'bc\'d3\'c8\'eb\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\b0\fs22 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 -(\cf9 void\cf0 )viewWillAppear:(\cf9 BOOL\cf0 )animated\
+\{\
+    [\cf9 super\cf0  \cf7 viewWillAppear\cf0 :animated];\
+    [\cf9 self\cf0 .\cf6 tabBarController\cf0 .\cf6 tabBar\cf0  \cf7 setHidden\cf0 :\cf9 YES\cf0 ];\
+    \cf9 self\cf0 .\cf6 navigationController\cf0 .\cf6 navigationBarHidden\cf0  = \cf9 NO\cf0 ;\
+    \cf9 self\cf0 .\cf6 navigationController\cf0 .\cf6 navigationBar\cf0 .\cf6 translucent\cf0  = \cf9 YES\cf0 ;\
+\}\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs36 \cf2 \'c0\'b4\'b7\'c0\'d6\'b9
+\f0 navbar
+\f1 \'bd\'e7\'c3\'e6\'d7\'aa\'bb\'bb\'b5\'c4\'b2\'bb\'cd\'ac\
+\
+storyboard\'ca\'ca\'c5\'e4\'c6\'c1\'c4\'bb\'d4\'daviewdidload\'a3\'acxib\'ca\'ca\'c5\'e4\'c6\'c1\'c4\'bb\'d4\'daviewDidappear\
+\
+\'d7\'d4\'b6\'a8\'d2\'e5view\'b2\'bb\'c4\'dc\'ca\'ca\'c5\'e4\'a3\'a1\'a3\'a1\'a3\'a1\
+\pard\tx529\pardeftab529\pardirnatural
+
+\fs28 \cf11 \'bd\'e2\'be\'f6\cf0 \'a3\'ba\'d4\'da
+\f0 - (\cf9 id\cf0 )initWithFrame:(\cf6 CGRect\cf0 )frame 
+\f1 \'c0\'ef\'c3\'e6\'bc\'d3\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0 \cf6 1.		UIView\cf0  *md = [nibview \cf7 lastObject\cf0 ];\
+        md.\cf6 frame\cf0  = \cf7 CGRectMake\cf0 (\cf8 0\cf0 , \cf8 0\cf0 , \cf12 kWidth\cf0 , md.\cf6 frame\cf0 .\cf6 size\cf0 .\cf6 height\cf0 );\
+        [\cf9 self\cf0  \cf7 addSubview\cf0 :md];\
+\
+2
+\f1 \'a1\'a3\'d4\'daxib\'c0\'ef\'c3\'e6\'bc\'d3\'d4\'bc\'ca\'f8
+\f0\fs22 \
+\
+\
+\pard\pardeftab720
+
+\f3\fs36 \cf13 \expnd0\expndtw0\kerning0
+\CocoaLigature1 NSMutableAttributedString 
+\f1 \'d0\'de\'b8\'c4\'ce\'c4\'b1\'be\'ca\'f4\'d0\'d4\
+\pard\pardeftab720
+
+\f3\fs28 \cf3 \expnd0\expndtw0\kerning0
+UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(20, 60, 100, 30)];\
+\'a0\'a0\'a0\'a0[self.view addSubview:lable];\
+\'a0\'a0\'a0\'a0lable.backgroundColor = [UIColor redColor];\
+\'a0\'a0\'a0\'a0lable.textAlignment = NSTextAlignmentCenter;\
+\'a0\'a0\'a0\'a0NSString *oldPrice = @"\'a5 999999";\
+\'a0\'a0\'a0\'a0NSUInteger length = [oldPrice length];\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:oldPrice];\
+\'a0\'a0\'a0\'a0[attri addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, length)];\
+\'a0\'a0\'a0\'a0[attri addAttribute:NSStrikethroughColorAttributeName value:[UIColor yellowColor] range:NSMakeRange(0, length)];\
+\'a0\'a0\'a0\'a0[lable setAttributedText:attri]; \
+\
+
+\f1\fs36 \cf2 \'ce\'aa
+\f3 \expnd0\expndtw0\kerning0
+uialertview
+\f1 \expnd0\expndtw0\kerning0
+\'cc\'ed\'bc\'d3
+\f3 \expnd0\expndtw0\kerning0
+block
+\f1 \expnd0\expndtw0\kerning0
+\'b7\'bd\'b7\'a8\'a3\'ac\'d4\'da\'c0\'e0\'b1\'f0\'d6\'d0\'cc\'ed\'bc\'d3\'b9\'d8\'c1\'aa\'b4\'fa\'cc\'e6\'cc\'ed\'bc\'d3\'ca\'f4\'d0\'d4
+\fs28 \cf3 \
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\fs22 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 - (\cf9 void\cf0 )handlerClickedButton:(\cf10 UIAlertView_block_self_index\cf0 )aBlock\
+\{\
+    \cf9 self\cf0 .\cf6 delegate\cf0  = \cf9 self\cf0 ;\
+    \cf7 objc_setAssociatedObject\cf0 (\cf9 self\cf0 , \cf12 UIAlertView_key_clicked\cf0 , aBlock, \cf7 OBJC_ASSOCIATION_COPY_NONATOMIC\cf0 );\
+\}\
+- (\cf9 void\cf0 )alertView:(\cf6 UIAlertView\cf0  *)alertView clickedButtonAtIndex:(\cf6 NSInteger\cf0 )buttonIndex\
+\{\
+    \cf10 UIAlertView_block_self_index\cf0  block = \cf7 objc_getAssociatedObject\cf0 (\cf9 self\cf0 , \cf12 UIAlertView_key_clicked\cf0 );\
+    \
+    \cf9 if\cf0  (block)\
+        block(alertView, buttonIndex);\
+\}\
+\
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\fs36 \cf2 item 
+\f1 \'cd\'e2\'c3\'e6
+\f0 price
+\f1 \'d6\'a7\'b8\'b6\'d6\'ae\'ba\'f3\'cf\'d4\'ca\'be\'a3\'ac\'c0\'ef\'c3\'e6price\'bc\'c6\'cb\'e3\'bc\'db\'b8\'f1\'cf\'d4\'ca\'be
+\f0\fs22 \cf0 \
+\
+
+\f1\fs36 \cf2 \'b2\'bb\'c3\'f7\'b0\'d7\'a3\'ac\'c9\'cc\'c6\'b7\'cf\'ea\'c7\'e9\'d2\'b3\'d4\'da\'bc\'d3\'d4\'d8\'c1\'cb\'c7\'eb\'c7\'f3\'c4\'da\'c8\'dd\'ba\'f3\'b5\'c4
+\f0 UI
+\f1 \'b2\'bc\'be\'d6\'ca\'c7\'d5\'fd\'b3\'a3\'b5\'c4\'a3\'ac\'c3\'bb\'d3\'d0\'c7\'eb\'c7\'f3\'b5\'c4\'ca\'b1\'ba\'f2\'b3\'f6\'b4\'ed\'a3\'ac\'d2\'aa\'d7\'a2\'d2\'e2\'bc\'d3\'d4\'d8
+\f0 UI
+\f1 \'ca\'c7\'b5\'c4\'cf\'c8\'ba\'f3\'cb\'b3\'d0\'f2\'ce\'ca\'cc\'e2
+\f0 \
+\
+
+\f1 \'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'bc\'e0\'cc\'fd\'c1\'d0\'b1\'ed
+\f0\fs22 \cf0 \
+\
+\
+}
